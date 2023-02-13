@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "169003764920",
+    "project_id": "fabinails-634b3",
+    "storage_bucket": "fabinails-634b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169003764920:android:bef02b9247f7565c5cf84d",
+        "android_client_info": {
+          "package_name": "com.example.fabinails"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169003764920-37dsdaes2qovicmpvd0jcjiupenals9s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu-09gMZ2MUXLpriNk35PBIBQKbwFqQPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169003764920-37dsdaes2qovicmpvd0jcjiupenals9s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

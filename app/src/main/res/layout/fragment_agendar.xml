@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Backgrund"
+    tools:context=".fragments.Agendar">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <DatePicker
+                android:id="@+id/calendario"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@id/calendario"
+                android:background="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/calendario" />
+
+            <ImageView
+                android:id="@+id/imagem_servico"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/custom_image_backgrund"
+                android:padding="4dp"
+                android:src="@drawable/nails"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+
+            <ImageButton
+                android:id="@+id/button_serviço"
+                android:layout_width="164dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/view"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@id/imagem_servico"
+                android:background="@drawable/custom_button_servico"
+                app:layout_constraintStart_toEndOf="@id/imagem_servico"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+
+            <ImageView
+                android:id="@+id/imagem_horario"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/imagem_servico"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/custom_image_backgrund"
+                android:padding="4dp"
+                android:src="@drawable/ic_clock"
+                app:layout_constraintTop_toBottomOf="@id/imagem_servico"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/button_horario"
+                android:layout_width="164dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/button_serviço"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@id/imagem_servico"
+                android:background="@drawable/custom_button_horario"
+                app:layout_constraintStart_toEndOf="@id/imagem_horario"
+                app:layout_constraintTop_toBottomOf="@id/button_serviço"/>
+
+            <RadioButton
+                android:id="@+id/checkbox_Irlocal"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/imagem_horario"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/text_irLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Ir ao local"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_Irlocal"
+                app:layout_constraintTop_toTopOf="@id/checkbox_Irlocal"
+                app:layout_constraintBottom_toBottomOf="@id/checkbox_Irlocal"/>
+
+            <RadioButton
+                android:id="@+id/checkbox_chamarResidencia"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_Irlocal"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/text_chamar_residencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Chamar em sua residência"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="@id/checkbox_chamarResidencia"
+                app:layout_constraintBottom_toBottomOf="@id/checkbox_chamarResidencia"
+                app:layout_constraintStart_toEndOf="@id/checkbox_chamarResidencia"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Acréscimo de taxa na locomoção"
+                android:textColor="@color/black"
+                android:textSize="8sp"
+                tools:ignore="SmallSp"
+                app:layout_constraintTop_toBottomOf="@id/text_chamar_residencia"
+                app:layout_constraintStart_toEndOf="@id/checkbox_chamarResidencia"/>
+
+            <Button
+                android:id="@+id/confirmar_selecao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/custom_button_login"
+                android:hint="Confirmar Seleção"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_chamar_residencia"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/confirmar_selecao"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>

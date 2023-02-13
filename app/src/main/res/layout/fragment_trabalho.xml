@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Backgrund"
+    tools:context=".fragments.Trabalho">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="110dp"
+                android:layout_height="150dp"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@id/trabalhoteste"
+                app:layout_constraintStart_toStartOf="@id/trabalhoteste"
+                app:layout_constraintTop_toTopOf="@id/trabalhoteste" />
+
+            <ImageView
+                android:id="@+id/trabalhoteste"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/trabalho1"
+                app:layout_constraintEnd_toStartOf="@id/trabalhoteste1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="110dp"
+                android:layout_height="150dp"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@id/trabalhoteste1"
+                app:layout_constraintStart_toStartOf="@id/trabalhoteste1"
+                app:layout_constraintTop_toTopOf="@id/trabalhoteste1" />
+
+            <ImageView
+                android:id="@+id/trabalhoteste1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/trabalho1"
+                app:layout_constraintEnd_toStartOf="@id/trabalhoteste2"
+                app:layout_constraintStart_toEndOf="@id/trabalhoteste"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="110dp"
+                android:layout_height="150dp"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@id/trabalhoteste2"
+                app:layout_constraintStart_toStartOf="@id/trabalhoteste2"
+                app:layout_constraintTop_toTopOf="@id/trabalhoteste2" />
+
+            <ImageView
+                android:id="@+id/trabalhoteste2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/trabalho1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/trabalhoteste1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>
